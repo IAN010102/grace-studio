@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>為什麼藍牙耳機會延遲：你聽到的，是零點幾秒前的聲音 — GRACE STUDIO</title>
+<meta name="description" content="日常解構 01。延遲不是技術做不到，是有人決定寧可你晚 0.2 秒聽到，也不要你聽到斷音。39 頁 PDF 加 EPUB，不推薦、不比較任何品牌或產品。">
+<meta name="theme-color" content="#003366">
+<meta name="format-detection" content="telephone=no">
+<link rel="canonical" href="https://gracestudio.co/product/why-bluetooth-lags.html">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Grace Studio">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:title" content="為什麼藍牙耳機會延遲：你聽到的，是零點幾秒前的聲音 — GRACE STUDIO">
+<meta property="og:description" content="日常解構 01。延遲不是技術做不到，是有人決定寧可你晚 0.2 秒聽到，也不要你聽到斷音。39 頁 PDF 加 EPUB，不推薦、不比較任何品牌或產品。">
+<meta property="og:url" content="https://gracestudio.co/product/why-bluetooth-lags.html">
+<meta property="og:image" content="https://gracestudio.co/assets/cover-why-bluetooth-lags.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "為什麼藍牙耳機會延遲：你聽到的，是零點幾秒前的聲音",
+  "description": "日常解構 01。延遲是刻意換來的穩定，不是技術做不到。說明緩衝、編解碼器與音畫同步補償的機制。",
+  "image": "https://gracestudio.co/assets/cover-why-bluetooth-lags.png",
+  "brand": {
+    "@type": "Brand",
+    "name": "Grace Studio"
+  },
+  "inLanguage": "zh-Hant",
+  "offers": {
+    "@type": "Offer",
+    "price": "159",
+    "priceCurrency": "TWD",
+    "availability": "https://schema.org/InStock",
+    "url": "https://thegracestudio.gumroad.com/l/why-bluetooth-lags"
+  }
+}
+</script>
+</head>
+<body>
+
+<a class="skip" href="#main">跳至主要內容</a>
+
+<header class="top">
+  <div class="shell topbar">
+    <a href="../index.html" class="brand" aria-label="Grace Studio 首頁">
+      <svg width="32" height="32" viewBox="0 0 100 100" aria-hidden="true">
+        <path d="M50 4 L88 26 V74 L50 96 L12 74 V26 Z" fill="#003366"/>
+        <path d="M50 17 L77 32.5 V67.5 L50 83 L23 67.5 V32.5 Z" fill="none" stroke="#fff" stroke-width="6"/>
+        <text x="50" y="50" text-anchor="middle" dominant-baseline="central" fill="#fff"
+              font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="42" font-weight="700">G</text>
+      </svg>
+      <span class="wordmark"><span class="a">GRACE</span><span class="b">STUDIO</span></span>
+    </a>
+
+    <nav class="nav" aria-label="主導覽">
+      <a href="../about.html">About</a>
+      <a href="../domains.html">Domains</a>
+      <a href="../vault.html" aria-current="page">The Vault</a>
+      <a href="../notices.html">Notices</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+
+    <button class="burger" id="burger" aria-label="開啟選單" aria-expanded="false" aria-controls="drawer">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="drawer" id="drawer">
+  <a href="../about.html">關於 Grace Studio</a>
+  <a href="../domains.html">業務範疇</a>
+  <a href="../vault.html">產品金庫</a>
+  <a href="../free.html">免費資源</a>
+  <a href="../notices.html">官方公告</a>
+  <a href="../contact.html">聯絡我們</a>
+  <div class="grp">
+    <h4 class="eyebrow" style="margin-bottom:10px">Legal</h4>
+    <a href="../legal/index.html" class="sub">合規中心</a>
+    <a href="../legal/terms.html" class="sub">服務條款</a>
+    <a href="../legal/privacy.html" class="sub">隱私權政策</a>
+    <a href="../legal/refund.html" class="sub">退款與交付政策</a>
+    <a href="../legal/disclaimer.html" class="sub">免責聲明</a>
+  </div>
+</div>
+
+<main id="main">
+
+<section class="page on">
+  <div class="shell" style="padding-top:32px;padding-bottom:24px">
+    <a href="../vault.html" class="back"><span class="ar-l">←</span> 返回產品金庫</a>
+    <p class="crumb" style="margin-bottom:0">The Vault &nbsp;/&nbsp; BU-03 &nbsp;/&nbsp; 日常解構 01</p>
+  </div>
+
+  <div class="shell" style="padding-bottom:88px">
+    <div class="pdp">
+      <div>
+        <img loading="eager" decoding="async" class="cover-img" data-asset="cover-why-bluetooth-lags.png" width="1280" height="720"
+             src="../assets/cover-why-bluetooth-lags.png"
+             alt="為什麼藍牙耳機會延遲：你聽到的，是零點幾秒前的聲音 封面">
+        <div class="thumbs book">
+          <figure><img loading="lazy" decoding="async" class="thumb-img" data-asset="wbl-p1.png" width="620" height="934"
+               src="../assets/wbl-p1.png"
+               alt="內頁預覽：緩衝區大小與延遲的取捨，說明沒有第三個選項的結構性限制">
+            <figcaption>緩衝就是延遲</figcaption></figure>
+          <figure><img loading="lazy" decoding="async" class="thumb-img" data-asset="wbl-p2.png" width="620" height="934"
+               src="../assets/wbl-p2.png"
+               alt="內頁預覽：藍牙編解碼器整理，說明高音質不等於低延遲">
+            <figcaption>高音質不等於低延遲</figcaption></figure>
+          <figure><img loading="lazy" decoding="async" class="thumb-img" data-asset="wbl-p3.png" width="620" height="934"
+               src="../assets/wbl-p3.png"
+               alt="內頁預覽：YouTube 音畫同步補償的原理，說明播放器如何延後畫面對齊延遲的聲音">
+            <figcaption>播放器作弊了</figcaption></figure>
+        </div>
+        <p class="cn-s" style="margin-top:14px;font-size:12px">
+          <span class="swipe-hint">左右滑動查看內頁 &nbsp;·&nbsp; </span>內頁實拍。</p>
+      </div>
+
+      <div>
+        <p class="eyebrow">BU-03 &nbsp;·&nbsp; 日常解構 01 &nbsp;·&nbsp; 已上架</p>
+        <p class="hero-hook">「延遲不是技術做不到。是有人決定，寧可你晚 0.2 秒聽到，也不要你聽到斷音。」</p>
+        <h1 class="h1" style="font-size:clamp(18px,3.2vw,24px);margin-top:14px;font-weight:400">為什麼藍牙耳機會延遲</h1>
+        <p class="cn" style="margin-top:14px">你聽到的，是零點幾秒前的聲音。</p>
+
+        <ul class="hook">
+          <li>藍牙音訊延遲大約在 150 到 300 毫秒之間——不是規格差，是刻意換來的穩定。</li>
+          <li>LDAC 音質極好，但延遲跟最基礎的 SBC 差不多，甚至更高：高音質不等於低延遲。</li>
+          <li>看 YouTube 嘴巴對得上，不是因為藍牙變快了，是播放器把畫面也延後了同樣的時間。</li>
+        </ul>
+
+        <div class="callout" style="margin-top:26px">
+          <p class="cn-s"><strong style="color:var(--navy)">這是「日常解構」系列的第一本。</strong><br>
+          「工程解構」問的是「這東西怎麼運作」，這條線問的是「為什麼它有那個讓我困擾的缺點」。你是被延遲困擾過才會點進來——所以最後一章會回答「所以我能做什麼」。</p>
+        </div>
+
+        <p class="price" style="margin-top:30px">NT$ 159 <small>一次付清</small></p>
+
+        <dl class="spec" style="margin-top:30px">
+          <div><dt>格式</dt><dd>PDF（39 頁）+ EPUB</dd></div>
+          <div><dt>語言</dt><dd>繁體中文</dd></div>
+          <div><dt>結構</dt><dd>序 + 八章 + 尾聲</dd></div>
+          <div><dt>數值呈現</dt><dd style="text-align:right;max-width:62%">一律以範圍表示，不寫單一精確數字</dd></div>
+          <div><dt>授權</dt><dd>單一使用者．不可轉售</dd></div>
+          <div><dt>退款</dt><dd style="text-align:right;max-width:62%">數位內容，發送後不適用七日解除權</dd></div>
+        </dl>
+
+        <div class="consent">
+          <input type="checkbox" id="agree-wbl">
+          <label for="agree-wbl">我已閱讀並同意<a href="../legal/terms.html" class="lnk" style="color:var(--navy)">服務條款</a>、<a href="../legal/refund.html" class="lnk" style="color:var(--navy)">退款政策</a>與<a href="../legal/disclaimer.html" class="lnk" style="color:var(--navy)">免責聲明</a>。我理解本書為知識整理型作品，寫的是機制與取捨，不是技術規格文件，也不是選購指南，不推薦、不比較任何特定品牌或產品，且本商品為非以有形媒介提供之數位內容，同意於發送存取權限後不適用七日解除權。</label>
+        </div>
+
+        <a class="btn btn-solid buy" id="buy-wbl" aria-disabled="true"
+           href="https://thegracestudio.gumroad.com/l/why-bluetooth-lags" target="_blank" rel="noopener">
+          在 Gumroad 購買 <span class="ar">→</span>
+        </a>
+        <p class="cn-s" style="margin-top:16px;font-size:12px">結帳與檔案交付由 Gumroad 處理，本站不接觸你的付款資訊。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 幾件你大概不知道的事 -->
+  <div class="mist rt"><div class="shell sect">
+    <p class="eyebrow rv" style="margin-bottom:14px">Seven Things</p>
+    <h2 class="h2 rv" style="margin-bottom:44px">幾件你大概不知道的事</h2>
+    <div class="mw">
+      <article class="rv" style="border-top:1px solid var(--rule);padding:28px 0">
+        <h3 class="h3">SBC 延遲高，不是因為演算法慢</h3>
+        <p class="cn" style="margin-top:12px">它的演算法其實很簡單。高延遲主要來自緩衝——被設計成在 2.4 GHz 這種嘈雜的環境裡要夠可靠，所以緩衝設得比較大。它追求的是穩定，不是速度。</p>
+      </article>
+      <article class="rv" style="border-top:1px solid var(--rule);padding:28px 0">
+        <h3 class="h3">高音質不等於低延遲</h3>
+        <p class="cn" style="margin-top:12px">LDAC 音質極好，但延遲跟 SBC 差不多，甚至更高。很多人以為「買貴的就不會延遲」——如果那個規格追求的是音質，它很可能犧牲了延遲。</p>
+      </article>
+      <article class="rv" style="border-top:1px solid var(--rule);padding:28px 0">
+        <h3 class="h3">耳機盒上印的縮寫，只說明了一半</h3>
+        <p class="cn" style="margin-top:12px">編解碼器是協商的結果，兩端都要支援才會啟用。不匹配就掉回 SBC。你的耳機支援低延遲，但手機不支援，還是 SBC。</p>
+      </article>
+      <article class="rv" style="border-top:1px solid var(--rule);padding:28px 0">
+        <h3 class="h3">人體會吸收 2.4 GHz</h3>
+        <p class="cn" style="margin-top:12px">把手機放在褲子後面口袋，耳機比較容易斷——訊號要穿過你的身體。這也是為什麼早期的真無線耳機，某一邊特別容易斷。</p>
+      </article>
+      <article class="rv" style="border-top:1px solid var(--rule);padding:28px 0">
+        <h3 class="h3">YouTube 對得上，是播放器把畫面也延後了</h3>
+        <p class="cn" style="margin-top:12px">不是藍牙變快了。作業系統知道目前的音訊延遲，播放器就把畫面延後同樣的時間——兩個都晚，所以對得上。</p>
+      </article>
+      <article class="rv" style="border-top:1px solid var(--rule);padding:28px 0">
+        <h3 class="h3">那為什麼遊戲不行</h3>
+        <p class="cn" style="margin-top:12px">因為畫面不能延後——畫面是你操作的依據。所以遊戲的選擇正好相反：畫面照常，聲音就讓它晚。</p>
+      </article>
+      <article class="rv" style="border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:28px 0">
+        <h3 class="h3">視訊通話音質變差，不是故障</h3>
+        <p class="cn" style="margin-top:12px">視訊通話兩邊都不能延後，所以系統會切換到低延遲模式，犧牲音質換延遲。那是換檔，不是壞掉。</p>
+      </article>
+    </div>
+  </div></div>
+
+  <!-- 為什麼數字對不上 -->
+  <div class="shell sect rt">
+    <div class="split">
+      <div class="rv"><p class="eyebrow" style="margin-bottom:14px">Why Ranges</p>
+        <h2 class="h2">為什麼書裡的數字全是範圍</h2></div>
+      <div class="rv mw">
+        <p class="cn">同一個編解碼器，不同來源給的延遲數字差異非常大——有的寫 150 到 200 毫秒，有的寫 250 到 350。這不是誰寫錯了：規格延遲不等於實際延遲，每個作業系統的實作不同，環境會改變它，測量方法也不同。</p>
+        <p class="cn" style="margin-top:18px">所以書裡任何一個藍牙延遲的數字，都當成「某個特定條件下的某一次測量」處理，不是固定規格。這本書因此全部用範圍呈現，不假裝有一個精確答案。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 目錄 -->
+  <div class="mist rt"><div class="shell sect">
+    <p class="eyebrow rv" style="margin-bottom:14px">Contents</p>
+    <h2 class="h2 rv" style="margin-bottom:44px">內容目錄</h2>
+    <ul class="toc mw">
+      <li><span class="n">序</span><span>零點二秒有多長</span></li>
+      <li><span class="n">01</span><span>零點二秒有多長</span></li>
+      <li><span class="n">02</span><span>聲音要先變成資料</span></li>
+      <li><span class="n">03</span><span>為什麼要先存一段才播</span></li>
+      <li><span class="n">04</span><span>空中很吵</span></li>
+      <li><span class="n">05</span><span>那些縮寫到底是什麼</span></li>
+      <li><span class="n">06</span><span>兩隻耳朵怎麼同步</span></li>
+      <li><span class="n">07</span><span>為什麼 YouTube 對得上</span></li>
+      <li><span class="n">08</span><span>所以你可以做什麼</span></li>
+      <li><span class="n">尾聲</span><span>那個沒有人告訴你的決定</span></li>
+    </ul>
+  </div></div>
+
+  <!-- FAQ -->
+  <div class="shell sect rt">
+    <p class="eyebrow rv" style="margin-bottom:14px">FAQ</p>
+    <h2 class="h2 rv" style="margin-bottom:44px">常見問題</h2>
+    <div class="mw">
+      <details class="faq"><summary>讀完能判斷哪款耳機延遲最低嗎？</summary>
+        <p class="cn">不能，這本書也不做這個判斷。它不推薦、不比較任何特定品牌或產品，講的是機制與取捨，不是選購指南。書中數值一律以範圍呈現，你的實際延遲取決於裝置組合、環境與編解碼器協商結果，需要精確數字應自行實測。</p></details>
+      <details class="faq"><summary>我玩遊戲想要延遲越低越好，這本書能幫我調嗎？</summary>
+        <p class="cn">書中最後一章會說明降低延遲與解決斷音是兩個方向相反的取捨——你可以理解原理並知道要往哪個方向調整，但不含針對特定裝置的操作教學。</p></details>
+      <details class="faq"><summary>為什麼不直接告訴我某個編解碼器的延遲是幾毫秒？</summary>
+        <p class="cn">因為那個數字會依作業系統實作、環境、測量方法而變，寫成單一數字反而是不準確的。書中第五章完整解釋這件事，並全部用範圍呈現。</p></details>
+      <details class="faq"><summary>作者是音訊工程師嗎？</summary>
+        <p class="cn">不是。作者是正在學習相關科目的學生，這本書是查證、比對公開資料後的整理。</p></details>
+      <details class="faq"><summary>可以退款嗎？</summary>
+        <p class="cn">本商品為非以有形媒介提供之數位內容，依《消費者保護法》第 19 條及《通訊交易解除權合理例外情事適用準則》第 2 條第 5 款，經你於結帳前明示同意後發送存取權限者，不適用七日解除權，因此不受理一般性退款。</p>
+        <p class="cn" style="margin-top:14px">但若檔案本身無法開啟、內容損毀或交付品項錯誤，仍可於 7 日內來信申請修復或退款——這是法定的瑕疵擔保責任，不受前述條款影響。</p></details>
+    </div>
+  </div>
+
+  <div class="on-navy"><div class="shell sect">
+    <div class="split">
+      <div><p class="eyebrow" style="margin-bottom:16px">日常解構 01</p>
+        <h2 class="h2">NT$ 159</h2></div>
+      <div>
+        <p class="cn">39 頁 PDF 加 EPUB，七件你大概不知道的事，最後回答所以你能做什麼。</p>
+        <div style="display:flex;flex-wrap:wrap;gap:14px;margin-top:30px">
+          <a href="https://thegracestudio.gumroad.com/l/why-bluetooth-lags" target="_blank" rel="noopener" class="btn">在 Gumroad 購買 <span class="ar">→</span></a>
+          <a href="../vault.html" class="btn" style="background:transparent;color:#fff;border-color:rgba(255,255,255,.5)">回到金庫</a>
+        </div>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+</main>
+
+<footer class="bot">
+  <div class="shell">
+    <div class="fgrid">
+      <div>
+        <div class="brand">
+          <svg width="30" height="30" viewBox="0 0 100 100" aria-hidden="true">
+            <path d="M50 4 L88 26 V74 L50 96 L12 74 V26 Z" fill="#003366"/>
+            <path d="M50 17 L77 32.5 V67.5 L50 83 L23 67.5 V32.5 Z" fill="none" stroke="#fff" stroke-width="6"/>
+            <text x="50" y="50" text-anchor="middle" dominant-baseline="central" fill="#fff"
+                  font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="42" font-weight="700">G</text>
+          </svg>
+          <span class="wordmark" style="font-size:15px"><span class="a">GRACE</span><span class="b">STUDIO</span></span>
+        </div>
+        <p class="cn-s" style="margin-top:22px;max-width:24em;font-size:13px">
+          數位煉油廠 — 將複雜的技術趨勢與學術系統，提煉為可執行的極簡工作流。
+        </p>
+        <p class="meta" style="margin-top:22px">thegracestudio.tw@gmail.com</p>
+        <p class="cn-s" style="margin-top:14px;font-size:12px">Grace Studio 為 Ian 個人經營之工作室品牌，非公司法人。<a href="../legal/index.html" class="lnk" style="color:var(--navy)">經營者資訊</a></p>
+      </div>
+
+      <nav aria-label="頁尾導覽">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="../about.html" class="lnk">關於我們</a></li>
+          <li><a href="../domains.html" class="lnk">業務範疇</a></li>
+          <li><a href="../contact.html" class="lnk">聯絡我們</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-label="產品導覽">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="../vault.html" class="lnk">產品金庫</a></li>
+          <li><a href="../free.html" class="lnk">免費資源</a></li>
+          <li><a href="../notices.html" class="lnk">官方公告</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-label="法律文件">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="../legal/terms.html" class="lnk">服務條款</a></li>
+          <li><a href="../legal/privacy.html" class="lnk">隱私權政策</a></li>
+          <li><a href="../legal/refund.html" class="lnk">退款與交付政策</a></li>
+          <li><a href="../legal/disclaimer.html" class="lnk">免責聲明</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="legalblock">
+      <p class="eyebrow" style="margin-bottom:14px">Disclaimer &amp; No-Refund Policy</p>
+      <p>基於數位資產易於複製之特性，本站數位產品經買方於結帳前明示同意後發送存取權限者，不適用七日解除權；惟檔案存在無法開啟等重大技術瑕疵時，仍得依退款與交付政策申請處理。本站提供之指南僅供教育與經驗分享，不構成投資、法律、醫療或移民建議，Grace Studio 不對使用者之商業或學業結果承擔責任；本項限制不適用於故意或重大過失，亦不排除依法不得預先免除之責任。所有內容僅授予單一使用者、非獨佔之個人使用權，嚴禁未經授權之公開傳輸、轉售或商業改作。</p>
+    </div>
+
+    <div class="colo">
+      <p>© <span id="yr">2026</span> Grace Studio. All Rights Reserved.</p>
+      <p>Designed &amp; engineered in Taiwan</p>
+    </div>
+  </div>
+</footer>
+
+<div class="cookie" id="cookie" role="region" aria-label="Cookie 同意">
+  <div class="shell cookie-in">
+    <div>
+      <p class="eyebrow" style="margin-bottom:8px">Cookies</p>
+      <p class="cn-s" style="font-size:13px;max-width:60em">本站使用必要性 Cookie 以維持基本功能。若你同意，我們另會啟用分析性 Cookie 來量測匿名流量並改善內容。你可隨時變更決定。詳見<a href="../legal/privacy.html" class="lnk" style="color:var(--navy)">隱私權政策</a>。</p>
+    </div>
+    <div class="acts">
+      <button class="btn btn-ghost" data-cookie="necessary">僅必要</button>
+      <button class="btn btn-solid" data-cookie="all">全部接受</button>
+    </div>
+  </div>
+</div>
+
+<script src="../assets/main.js" defer></script>
+</body>
+</html>
